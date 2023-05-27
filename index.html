@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Web Application</title>
+  <style>
+    .input-container {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="input-container">
+    <label for="name">Name:</label>
+    <input type="text" id="name" />
+  </div>
+  <div class="input-container">
+    <label for="age">Age:</label>
+    <input type="text" id="age" />
+  </div>
+  <div class="input-container">
+    <label for="telephone">Telephone:</label>
+    <input type="text" id="telephone" />
+  </div>
+  <button id="submit-btn">Submit</button>
+
+  <script>
+    // Get references to the input fields and submit button
+    const nameInput = document.getElementById('name');
+    const ageInput = document.getElementById('age');
+    const telephoneInput = document.getElementById('telephone');
+    const submitButton = document.getElementById('submit-btn');
+
+    // Attach an event listener to the submit button
+    submitButton.addEventListener('click', function() {
+      // Get the values entered by the user
+      const name = nameInput.value;
+      const age = ageInput.value;
+      const telephone = telephoneInput.value;
+
+      // Display the message
+      const message = `Hi there, ${name}! You did an awesome job.`;
+      alert(message);
+
+      submitButton.classList.add('blue');
+
+    });
+  </script>
+</body>
+</html>
